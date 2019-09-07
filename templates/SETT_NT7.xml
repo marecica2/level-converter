@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCustomLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CustomLevel LevelId="" Auto="false">
+    <Settings>
+      <IndicatorId>637033750448487993</IndicatorId>
+      <SessionType>Day</SessionType>
+      <SessionValue>1</SessionValue>
+      <Product>CustomLevels</Product>
+      <Ticker>6B 09-19</Ticker>
+      <Label />
+      <Workspace>Default</Workspace>
+    </Settings>
+    <Price>1.2337</Price>
+    <LineColor>0:Teal</LineColor>
+    <LineWidth>2</LineWidth>
+    <LineStyle>Dash</LineStyle>
+    <Text>SETT</Text>
+    <TextPosition>RightAbove</TextPosition>
+    <Visibility>AllWithThisInstrument</Visibility>
+    <ShowInAllWorkspaces>true</ShowInAllWorkspaces>
+    <AlertOn>false</AlertOn>
+    <AlertSound>Alert2.wav</AlertSound>
+    <Pips>3</Pips>
+    <FileName>SETT</FileName>
+  </CustomLevel>
+</ArrayOfCustomLevel>

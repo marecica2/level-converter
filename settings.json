@@ -1,0 +1,9 @@
+{
+  "mapping": [
+    {
+      "source": "/home/marekb/workspace/level-converter/nt8/SETT.xml",
+      "dest": "/home/marekb/workspace/level-converter/nt7/SETT.xml",
+      "color": "0:teal"
+    }
+  ]
+}
