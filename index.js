@@ -1,105 +1,63 @@
 const fs = require('fs');
-const  parser = require('xml2json');
-const json2xml = require('json2xml');
+const Parser = require('fast-xml-parser');
 
+const XMLParser = new Parser.j2xParser({
+  ignoreAttributes: false,
+  format: true,
+  indentBy: "  ",
+});
 
-const { mapping } = require('./settings');
+const {mapping} = require('./settings');
 
-for(const item of mapping) {
-  const { source, dest } = item;
-  const nt8levels = JSON.parse(parser.toJson(fs.readFileSync(source)));
-  const nt7levels = [];
-  for(const level of nt8levels['ArrayOfLevel']['Level']){
+for (const item of mapping) {
+  const {source, dest} = item;
+  const xmlData = fs.readFileSync(source).toString();
+  const nt8levels = Parser.parse(xmlData, {
+    ignoreAttributes: false,
+    parseAttributeValue: true,
+  });
+  let nt7Levels = '';
+  for (const level of nt8levels['ArrayOfLevel']['Level']) {
+    let opacity = 0;
+    let tickerPrefix = level['@_Instrument'].length === 6 ? '$' : '';
+    const number =  parseInt(level['@_LevelId'].replace(/\D/g, ''));
+    if(isNaN(number)) {
+      opacity = 0;
+    } else if(number != null && (number === 0 || number === 100)) {
+      opacity = 0;
+    } else {
+      opacity = 70;
+    }
     const nt7level = {
       CustomLevel: {
         Settings: {
-          IndicatorId: '637033750448487993',
+          IndicatorId: '637034386862885483',
           SessionType: 'Day',
           SessionValue: '1',
-          Product: 'Customlevels',
-          Ticker: level.Instrument,
-          Label: level.LevelId,
-          Workspace: 'Default',
+          Product: 'CustomLevels',
+          Ticker: tickerPrefix + level['@_Instrument'],
+          Label: null,
+          Workspace: 'Market Profile VWAP',
         },
-        Price: level.Price,
-        LineColor: '0:Teal',
-        LineWidth: 2,
+        Price: level['@_Price'],
+        LineColor: opacity + ':' + (item.color || level.Line.Color),
+        LineWidth: item.width || 1,
         LineStyle: 'Dash',
-        Text: level.LevelId,
+        Text: level.Caption['@_Text'],
         TextPosition: 'RightAbove',
         Visibility: 'AllWithThisInstrument',
         ShowInAllWorkspaces: true,
         AlertOn: false,
         AlertSound: 'Alert2.wav',
         Pips: 3,
-        FileName: level.LevelId,
+        FileName: level['@_LevelId'],
+        '@_LevelId': level['@_LevelId'],
+        '@_Auto': false,
       }
     };
-    nt7levels.push(nt7level);
+    nt7Levels += XMLParser.parse(nt7level);
   }
-  const nt7json = {'ArrayOfCustomLevel': nt7levels};
-  console.log(JSON.stringify(nt7json, null, 2));
-  fs.writeFileSync(dest, json2xml(nt7json));
+  var xml = '<?xml version="1.0" encoding="utf-8"?>\n'
+      + '<ArrayOfCustomLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">\n' + nt7Levels + '</ArrayOfCustomLevel>';
+  fs.writeFileSync(dest, xml);
 }
-
-// <ArrayOfCustomLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-//    <CustomLevel LevelId="" Auto="false">
-//       <Settings>
-//       <IndicatorId>637033750448487993</IndicatorId>
-//       <SessionType>Day</SessionType>
-//       <SessionValue>1</SessionValue>
-//       <Product>CustomLevels</Product>
-//       <Ticker>6B 09-19</Ticker>
-//   <Label />
-//   <Workspace>Default</Workspace>
-//   </Settings>
-//   <Price>1.2337</Price>
-//   <LineColor>0:Teal</LineColor>
-//   <LineWidth>2</LineWidth>
-//   <LineStyle>Dash</LineStyle>
-//   <Text>SETT</Text>
-//   <TextPosition>RightAbove</TextPosition>
-//   <Visibility>AllWithThisInstrument</Visibility>
-//   <ShowInAllWorkspaces>true</ShowInAllWorkspaces>
-//   <AlertOn>false</AlertOn>
-//   <AlertSound>Alert2.wav</AlertSound>
-//   <Pips>3</Pips>
-//   <FileName>SETT</FileName>
-//     </CustomLevel>
-//   </ArrayOfCustomLevel>
-
-// <?xml version="1.0" encoding="utf-8"?>
-// <ArrayOfLevel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-//       <Level xsi:type="Chart" LevelId="SETT" Price="2.435" Instrument="NG 10-19" Workspace="CL_ALES">
-//       <Guid>C83E04F0-A5A8-46CC-B837-3164D8D87DF6</Guid>
-//   <Caption Text="6 SETT" Position="Right" />
-//       <Line>
-//       <Color>#FF01FE48</Color>
-//       <Width>1</Width>
-//       <DashStyle>Solid</DashStyle>
-//       </Line>
-//       <ZoneRangeLower>0</ZoneRangeLower>
-//       <ZoneRangeUpper>0</ZoneRangeUpper>
-//       <Alerts />
-//       <StartTime />
-//       <EndTime />
-//       <ShowInAllWorkspaces>true</ShowInAllWorkspaces>
-//       <LinkedLevels />
-//       </Level>
-//       <Level xsi:type="Chart" LevelId="SETT" Price="2.335" Instrument="NG 10-19" Workspace="CL_ALES">
-//       <Guid>C83E04F0-A5A8-46CC-B837-3164D8D5596</Guid>
-//   <Caption Text="6 SETT" Position="Right" />
-//       <Line>
-//       <Color>#FF01FE48</Color>
-//       <Width>1</Width>
-//       <DashStyle>Solid</DashStyle>
-//       </Line>
-//       <ZoneRangeLower>0</ZoneRangeLower>
-//       <ZoneRangeUpper>0</ZoneRangeUpper>
-//       <Alerts />
-//       <StartTime />
-//       <EndTime />
-//       <ShowInAllWorkspaces>true</ShowInAllWorkspaces>
-//       <LinkedLevels />
-//       </Level>
-//       </ArrayOfLevel>

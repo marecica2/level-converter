@@ -1,9 +1,68 @@
 {
   "mapping": [
     {
-      "source": "/home/marekb/workspace/level-converter/nt8/SETT.xml",
-      "dest": "/home/marekb/workspace/level-converter/nt7/SETT.xml",
-      "color": "0:teal"
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\ATR_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\ATR_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\FE_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\FE_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\FE_swing.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\FE_swing.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\invest.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\invest.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\LTL_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\LTL_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\MIB_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\MIB_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\MPA_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\MPA_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\MvPOC_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\MvPOC_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\NS_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\NS_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\OPEN_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\OPEN_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\SETT_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\SETT_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\VSA_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\VSA_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\YHL_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\YHL_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\YIB_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\YIB_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\YVA_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\YVA_NT8.xml"
+    },
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\YvPOC_NT8.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\YvPOC_NT8.xml"
     }
   ]
 }

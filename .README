@@ -1,0 +1,3 @@
+Link Shortcut:
+
+C:\Windows\System32\cmd.exe /k node c:\level-converter\index.js && exit

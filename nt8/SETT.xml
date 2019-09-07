@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfLevel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Level xsi:type="Chart" LevelId="SETT" Price="2.435" Instrument="NG 10-19" Workspace="CL_ALES">
+  <Level xsi:type="Chart" LevelId="NS_-300" Price="2.435" Instrument="NG 10-19" Workspace="CL_ALES">
     <Guid>C83E04F0-A5A8-46CC-B837-3164D8D87DF6</Guid>
     <Caption Text="6 SETT" Position="Right" />
     <Line>
