@@ -6,15 +6,8 @@
     },
     {
       "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\FE_NT8.xml",
-      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\FE_NT8.xml"
-    },
-    {
-      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\FE_swing.xml",
-      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\FE_swing.xml"
-    },
-    {
-      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\invest.xml",
-      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\invest.xml"
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\FE_NT8.xml",
+      "width": 3
     },
     {
       "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\LTL_NT8.xml",

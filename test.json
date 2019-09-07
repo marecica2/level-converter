@@ -1,0 +1,8 @@
+{
+  "mapping": [
+    {
+      "source": "/home/marekb/workspace/level-converter/nt8/invest.xml",
+      "dest": "/home/marekb/workspace/level-converter/nt7/invest.xml"
+    }
+  ]
+}

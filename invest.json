@@ -1,0 +1,9 @@
+{
+  "mapping": [
+    {
+      "source": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 8\\bin\\MarketProfitPack\\CustomLevels\\invest.xml",
+      "dest": "C:\\Users\\marec\\OneDrive\\Documents\\NinjaTrader 7\\bin\\MarketProfitPack\\CustomLevels\\invest.xml",
+      "width": 3
+    }
+  ]
+}
